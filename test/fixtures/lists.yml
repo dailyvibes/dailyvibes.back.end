@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  duedate_at: 2018-07-11 08:16:41
+  archived_at: 2018-07-11 08:16:41
+  completed_at: 2018-07-11 08:16:41
+  title_description: MyText
+  emoji: MyString
+  color: MyString
+  favourite: false
+  visible: false
+  public: false
+  dv_default: false
+
+two:
+  title: MyString
+  duedate_at: 2018-07-11 08:16:41
+  archived_at: 2018-07-11 08:16:41
+  completed_at: 2018-07-11 08:16:41
+  title_description: MyText
+  emoji: MyString
+  color: MyString
+  favourite: false
+  visible: false
+  public: false
+  dv_default: false

@@ -26,4 +26,4 @@
 /tmp/*
 /log/*
 /coverage/*
-.env
+/.env
