@@ -27,7 +27,10 @@ class ListsController < ApiController
 
   # POST /lists
   def create
+    return head :forbidden unless current_user
+
     @list = List.new(list_params)
+    @list.user = current_user
 
     if @list.save
       render json: @list, status: :created, location: @list
