@@ -6,6 +6,10 @@ class ApiController < ActionController::API
 
   after_action :refresh_token, if: :token?
 
+  def default_response
+    render json: { status: :ok }
+  end
+
   private
 
   def token?
