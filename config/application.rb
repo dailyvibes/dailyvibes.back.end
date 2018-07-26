@@ -31,6 +31,10 @@ module DailyvibesBackEnd
     config.time_zone = 'Eastern Time (US & Canada)'
     config.app_generators.scaffold_controller = :scaffold_controller
 
+    config.generators do |g|
+      g.test_framework :rspec
+    end
+
     # Middleware for ActiveAdmin
     # https://blog.heroku.com/a-rock-solid-modern-web-stack
     config.middleware.use Rack::MethodOverride
