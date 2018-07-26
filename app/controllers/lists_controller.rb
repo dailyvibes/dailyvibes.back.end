@@ -50,6 +50,8 @@ class ListsController < ApiController
 
   # DELETE /lists/1
   def destroy
+    render head :forbidden unless @list.user == current_user
+
     @list.destroy
   end
 
