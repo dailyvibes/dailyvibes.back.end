@@ -6,7 +6,11 @@ class UserTokenController < Knock::AuthTokenController
 
   def dv_create
     # debugger
+
+    user = User.find_by(email: auth_params[:email])
+    auth_token = Knock::AuthToken.new payload: { sub: user.id }
     decoded_token = Knock::AuthToken.new(token: auth_token.token).payload
+
     return unless decoded_token && decoded_token['sub']
 
     result = {
@@ -15,5 +19,7 @@ class UserTokenController < Knock::AuthTokenController
     }.to_json
 
     render json: result, status: :created
+  rescue StandardError => e
+    raise e
   end
 end
