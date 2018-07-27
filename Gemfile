@@ -27,6 +27,7 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'dotenv-rails'
   gem 'factory_bot_rails'
+  gem 'faker', git: 'https://github.com/stympy/faker.git', branch: 'master'
   gem 'pry'
   gem 'rspec-rails'
   gem 'rubocop', require: false
